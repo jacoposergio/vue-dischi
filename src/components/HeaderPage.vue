@@ -1,6 +1,8 @@
 <template>
   <header>
-    sono un header
+    <div class="spotify-logo">
+        logo
+    </div>
   </header>
 </template>
 
@@ -10,6 +12,13 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+@import'@/assets/scss/vars.scss';
+
+    header{
+        height: 50px;
+        background-color: $bg_first_color;
+        
+    }
 
 </style>
