@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <div class="song-img">
-        <img src="r" alt="">
+        <img src="" alt="">
     </div>
     <h3>{{song.title}}</h3>
     <h4>Artist</h4>

@@ -3,7 +3,7 @@
     <div class="main-wrapper">
         <div class="container">
             <div class="row row-cols-md-5 row-cols-sm-3  ">
-                <div v-for="song in songList " class="col" :key="index" :productDetails="element" >
+                <div v-for="song, index in songList " class="col" :key="index" :productDetails="element" >
                     <SongCard/>
                 </div> 
             </div>
