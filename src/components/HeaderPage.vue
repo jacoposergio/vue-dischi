@@ -18,6 +18,7 @@ export default {
     header{
         height: 50px;
         background-color: $bg_first_color;
+        color: white;
         
     }
 
