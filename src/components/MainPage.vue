@@ -52,6 +52,7 @@ export default {
 
 main{
     background-color: $bg_second_color;
+    height: 100vh;
     .main-wrapper{
         padding: 50px 0;
         margin: 0 auto;
