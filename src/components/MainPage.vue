@@ -51,10 +51,16 @@ export default {
 
 
 main{
+    background-color: $bg_second_color;
     .main-wrapper{
-        margin: 50px auto;
+        padding: 50px 0;
+        margin: 0 auto;
         width: 70%;
     }
+
+        .col{
+            display: flex;
+        }
 }
 
 </style>

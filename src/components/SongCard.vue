@@ -1,11 +1,11 @@
 <template>
   <div class="card">
     <div class="song-img">
-        <img src="" alt="">
+        <img :src="info.poster" alt="">
     </div>
     <h3>{{info.title}}</h3>
-    <h4>{{info.Author}}</h4>
-    <h5>data</h5>
+    <h4>{{info.author}}</h4>
+    <h5>{{info.year}}</h5>
 </div>
 </template>
 
@@ -48,7 +48,7 @@ export default {
         flex-direction: column;
         align-items: center;
         padding: 1rem;
-        background-color: lightcyan;
+        background-color: $bg_first_color;
         text-align: center;
         margin-bottom: 1rem;
 
@@ -58,11 +58,16 @@ export default {
             background-color: black;
         }
 
+        img{
+            width:100% ;
+        }
+
         h3{
             width: 100%;
             font-size: 1.5rem;
             padding: 0.5rem 0;
             margin-bottom: 0;
+            color: white;
         }
 
         h4{
