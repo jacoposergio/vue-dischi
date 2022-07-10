@@ -2,19 +2,22 @@
   <div id="app">
       <HeaderPage/>
        <MainPage/>
+       <SongCard/>
   </div>
 </template>
 
 <script>
 import HeaderPage from './components/HeaderPage.vue'
 import MainPage from './components/MainPage.vue'
+import SongCard from './components/SongCard.vue'
 
 export default {
   name: 'App',
   components: {
     HeaderPage,
-    MainPage
-}
+    MainPage, 
+    SongCard
+   }
 }
 </script>
 

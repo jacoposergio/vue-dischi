@@ -3,8 +3,8 @@
     <div class="main-wrapper">
         <div class="container">
             <div class="row row-cols-md-5 row-cols-sm-3  ">
-                <div v-for="song, index in songList " class="col" :key="index" :productDetails="element" >
-                    <SongCard/>
+                <div v-for="song, index in songList " class="col" :key="index" :element="song" >
+                    <SongCard :info="song" />
                 </div> 
             </div>
         </div>
@@ -13,6 +13,7 @@
 </template>
 
 <script>
+import axios from "axios";
 import SongCard from './SongCard.vue';
 
 export default {
@@ -20,6 +21,27 @@ export default {
     components: {
         SongCard
     },
+    
+   data(){
+       return{
+           url: "https://flynn.boolean.careers/exercises/api/array/music",
+           songList:[],
+       }
+   },
+     created() {
+    this.getSongs();
+   },
+
+   methods:{
+    getSongs(){
+        axios.get(this.url).then( (result) =>{
+            this.songList = result.data.response;
+        })
+        .catch((err)=>{
+             console.log("Error",err);
+        });
+    }
+   }
 }
 </script>
 

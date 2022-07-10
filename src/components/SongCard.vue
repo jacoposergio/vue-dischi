@@ -3,39 +3,39 @@
     <div class="song-img">
         <img src="" alt="">
     </div>
-    <h3>{{song.title}}</h3>
-    <h4>Artist</h4>
+    <h3>{{info.title}}</h3>
+    <h4>{{info.Author}}</h4>
     <h5>data</h5>
 </div>
 </template>
 
 <script>
-import axios from "axios";
 
 export default {
     name: "SongCard",
+    props: ['info']
 
-   data(){
-       return{
-           url: "https://flynn.boolean.careers/exercises/api/array/music",
-           songList:[],
-       }
-   },
+//    data(){
+//        return{
+//            url: "https://flynn.boolean.careers/exercises/api/array/music",
+//            songList:[],
+//        }
+//    },
 
-   created() {
-    this.getSongs();
-   },
+//    created() {
+//     this.getSongs();
+//    },
 
-   methods:{
-    getSongs(){
-        axios.get(this.url).then( (result) =>{
-            this.songList = result.data.results
-        })
-        .catch((err)=>{
-             console.log("Error",err);
-        });
-    }
-   }
+//    methods:{
+//     getSongs(){
+//         axios.get(this.url).then( (result) =>{
+//             this.songList = result.data.results
+//         })
+//         .catch((err)=>{
+//              console.log("Error",err);
+//         });
+//     }
+//    }
 
 }
 </script>
