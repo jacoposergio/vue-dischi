@@ -1,7 +1,16 @@
 <template>
   <main>
       <div v-if="isLoaded" class="main-wrapper">
-          <div class="container">
+          <div class="container-fluid">
+            <div class="choose-genre">
+                <label for="cars">Seleziona un genere</label>
+                     <select name="cars" id="cars">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                     </select>
+            </div>
               <div class="row row-cols-md-5 row-cols-sm-3  ">
                   <div v-for="song, index in songList " class="col" :key="index" :element="song" >
                     <SongCard :info="song" />
@@ -57,16 +66,33 @@ export default {
 
 main{
     background-color: $bg_second_color;
-    height: 100vh;
+    height: 100%;
+    
     .main-wrapper{
         padding: 50px 0;
         margin: 0 auto;
         width: 70%;
-    }
 
+     .choose-genre{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+
+        label{
+            color: white;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+
+        option{
+            font-family: $main_font;;
+        }
+     }
         .col{
             display: flex;
         }
+    }
+
 }
 
 </style>
