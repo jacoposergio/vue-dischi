@@ -3,12 +3,13 @@
       <div v-if="isLoaded" class="main-wrapper">
           <div class="container-fluid">
             <div class="choose-genre">
-                <label for="cars">Seleziona un genere</label>
-                     <select name="cars" id="cars">
-                        <option value="volvo">Volvo</option>
-                        <option value="saab">Saab</option>
-                        <option value="mercedes">Mercedes</option>
-                        <option value="audi">Audi</option>
+                <label for="cars">Filtra album per genere</label>
+                     <select name="genre" id="genre">
+                         <option value="tutti">Tutti</option>
+                         <option value="rock">Rock</option>
+                         <option value="pop">Pop</option>
+                         <option value="jazz">Jazz</option>
+                         <option value="metal">Metal</option>
                      </select>
             </div>
               <div class="row row-cols-md-5 row-cols-sm-3  ">
